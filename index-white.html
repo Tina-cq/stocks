@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>White</title>
+  <link rel="stylesheet" href="css/white.css">
+  <style>
+    .bdinput {
+      position: fixed;
+      top: 8px;
+      left: 50%;
+      height:36px;
+      width: 230px;
+      margin-left: -115px;
+      z-index: 9999;
+     display: block;
+      border-radius: 3px;
+      text-align: left;
+      background: #f2f2f2 url(images/search02.png) no-repeat 8px center;
+      background-size: 18px;
+    }
+    .bdinput input {
+      border: 0;
+      margin-left: 32px;
+      margin-right: 10px;
+      width: calc(100% - 42px);
+      font-size: 14px;
+      background: none;
+      color: #fff;
+      position: relative;
+      top: -5px;
+    }
+    .bdinput input:focus{
+      outline: none;
+    }
+    .resultlist {
+      position: absolute;
+      width: calc(100% - 2px);
+      border: 1px solid #f6f6f6;
+      left: 0;
+      top: 37px;
+      z-index: 9999;
+      background-color: #fff;
+      color: #adc4de;
+      box-shadow: -2px 2px 15px #ccc;
+      display: none;
+    }
+    .resultlist ul li {
+      cursor: pointer;
+      padding: 0 10px;
+      color: #4e4e4e;
+      font-size: 13px;
+      line-height: 38px;
+      border-bottom: 1px solid #f6f6f6;
+    }
+    .header{
+      display: none;
+    }
+    .aaa{
+      border:1px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="header">
+      <h1>万科A<span>(10002)</span></h1>
+      <img src="images/search.png" alt="search">
+    </div>
+
+    <div class="bdinput">
+      <input type="text" placeholder="请输入代码或股票简称首字母">
+      <div class="resultlist">
+        <ul>
+          <li>000038　深大通</li>
+          <li>fsdfds</li>
+          <li>fsdfds</li>
+          <li>fsdfds</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="content first-content">
+    <div class="sub-content">
+      <div style="width: 100%; margin: 20px auto 0;position: relative">
+        <p class="container_p">综合评分：<span>69.46</span></p>
+        <div class="star">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div id="container01" style="width: 100%;"></div>
+      </div>
+
+      <div class="ranking">
+        <div class="ranking_left">总体排名:<b>1</b><span>/3000</span></div>
+        <div class="ranking_right">行业排名:<b>1</b><span>/100</span></div>
+        <div class="arrow"><i></i>+5</div>
+      </div>
+      <div class="time">诊股时间：2017-05-34　15:15:15</div>
+    </div>
+  </div>
+  <div class="content">
+    <!--<div class="sub-name"><h2>雷达图</h2></div>-->
+    <div class="category">雷达图</div>
+    <div class="sub-content">
+      <div id="radar" style="width: 100%;"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="category">行情表现</div>
+    <div class="sub-content">
+      <div class="ranking">
+        <div class="ranking_left" style="text-align:center;padding-left:0;">分数：<b style="padding-left: 3px;">80</b></div>
+        <div class="ranking_right">行业排名:<b>1</b><span>/100</span></div>
+        <div class="arrow"><i></i>+5</div>
+      </div>
+      <div id="market" style="width: 100%;margin-top: 10px;"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="category">盈利能力</div>
+    <div class="sub-content">
+      <div class="ranking">
+        <div class="ranking_left" style="text-align:center;padding-left:0;">分数：<b style="padding-left: 3px;">70</b></div>
+        <div class="ranking_right">行业排名:<b>1</b><span>/100</span></div>
+        <div class="arrow"><i></i>+5</div>
+      </div>
+      <div id="profit" style="width: 100%;margin-top: 10px;"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="category">成长能力</div>
+    <div class="sub-content">
+      <div class="ranking">
+        <div class="ranking_left" style="text-align:center;padding-left:0;">分数：<b style="padding-left: 3px;">55</b></div>
+        <div class="ranking_right">行业排名:<b>1</b><span>/100</span></div>
+        <div class="arrow"><i></i>+5</div>
+      </div>
+      <div id="growup" style="width: 100%;margin-top: 10px;"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="category">技术指标</div>
+
+    <div class="sub-content">
+      <div class="ranking">
+        <div class="ranking_left" style="text-align:center;padding-left:0;">分数：<b style="padding-left: 3px;">55</b></div>
+        <div class="ranking_right">行业排名:<b>1</b><span>/100</span></div>
+        <div class="arrow"><i></i>+5</div>
+      </div>
+      <div id="technology" style="width: 100%;margin-top: 10px;"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="category">资金流向</div>
+
+    <div class="sub-content">
+      <div class="ranking">
+        <div class="ranking_left" style="text-align:center;padding-left:0;">分数：<b style="padding-left: 3px;">55</b></div>
+        <div class="ranking_right">行业排名:<b>25</b><span>/100</span></div>
+        <div class="arrow"><i></i>+5</div>
+      </div>
+      <div id="money" style="width: 100%;margin-top: 10px;"></div>
+    </div>
+  </div>
+  <div class="content" style=" padding-bottom: 30px;">
+    <div class="category">技术认同</div>
+    <div class="sub-content" style="min-height: inherit;">
+      <div class="ranking">
+        <div class="ranking_left" style="text-align:center;padding-left:0;">分数：<b style="padding-left: 3px;">55</b></div>
+        <div class="ranking_right">行业排名:<b>1</b><span>/100</span></div>
+        <div class="arrow"><i></i>+5</div>
+      </div>
+      <div class="progressBar">
+        <div class="toolTip">买入:150 <span class="tipArrow"></span></div>
+        <div class="progressBar_bg">
+          <span class="progressBar_bg01"></span>
+          <span class="progressBar_bg02"></span>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pp">1月内16家机构关注万科A000002（7家买入）</div>
+  </div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/highcharts/highcharts.js"></script>
+<script src="js/highcharts/highcharts-more.js"></script>
+<script src="js/highcharts/exporting.js"></script>
+<script src="js/highcharts/highcharts-zh_CN.js"></script>
+<script>
+
+  var screenW=document.documentElement.clientWidth;
+  $("#container01").css("height",screenW*0.9);
+  $("#radar").css("height",screenW*0.9);
+  $("#market").css("height",screenW*0.7);
+  $("#profit").css("height",screenW*0.7);
+  $("#growup").css("height",screenW*0.7);
+  $("#technology").css("height",screenW*0.7);
+  $("#money").css("height",screenW*0.7);
+
+  $(".star li:lt(2)").addClass("star01");  //要几颗星星数字写几
+
+//*************************************************技术认同
+var num01="30%";  //替换为传入的百分比
+var num02=100-parseInt(num01)+"%";
+
+$(".dot").css("left",num01);
+$(".progressBar_bg01").css("width",num01);
+$(".progressBar_bg02").css("width",num02);
+
+$(".dot").click(function(){
+    $(".toolTip").show();
+    if(parseInt(num01)<=10){
+       $(".toolTip").css("left","12%");
+    }else if(parseInt(num01)>85){
+      $(".toolTip").css("left","85%");
+    }
+    else{
+      $(".toolTip").css("left",num01);
+    }
+    setTimeout(function(){
+      $(".toolTip").hide();
+    },2000)
+  });
+  //*************************************************技术认同结束
+
+</script>
+
+<script src="js/container01.js"></script>
+<script src="js/radar.js"></script>
+<script src="js/market.js"></script>
+<script src="js/profit.js"></script>
+<script src="js/growup.js"></script>
+<script src="js/technology.js"></script>
+<script src="js/money.js"></script>
+

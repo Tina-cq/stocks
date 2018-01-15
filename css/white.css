@@ -1,0 +1,197 @@
+*{padding: 0;margin: 0;}
+html{font-size: 10px;background-color: #f5f7f8;font-family: "microsoft yahei";}
+li{
+    list-style: none;
+}
+h1,h2{font-weight: normal;}
+.top{position:fixed;top:0;z-index: 2000;width: 100%;height: 5rem;line-height: 5rem;border-bottom:1px solid #e2e2e2;background-color: #fff}
+.top h1{text-align:center;font-size:2.2rem;color: #4a4a4a;}
+.top span{font-size: 1.6rem;}
+.top img{position:fixed;top:1rem;right:1rem;height:3.2rem;width: 3.2rem;}
+.content{margin-top: 1rem;border:1px solid #e2e2e2;border-style: solid none;background-color: #fff}
+.first-content{margin-top: 4rem;border-bottom:1px solid #e2e2e2;}
+
+.sub-name{height: 4rem;line-height: 4rem;color: #4a4a4a;border-bottom:1px solid #efefef;}
+
+.sub-name h2{margin-left: 2rem;font-size:17px;}
+
+.category{
+    height: 4rem;
+    line-height: 4rem;
+    color: #4a4a4a;
+    border-bottom:1px solid #efefef;
+    padding-left: 2rem;
+    font-size:17px;
+}
+
+.sub-content{min-height: 30rem;padding: .6rem 0;}
+
+
+.container_p{
+    text-align: center;
+    font-size: 13px;
+    color: #4a4a4a;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    bottom: 4%;
+    z-index: 10;
+    height: 40px;
+}
+.container_p span{
+    font-size: 18px;
+    color: #ff424a;
+    position: relative;
+    top: 2px;
+}
+
+.ranking{
+    width: 95%;
+    background: #fff;
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.15); /* ÀÏµÄ Firefox */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+    border-radius: 3px;
+    margin:8px auto 0;
+    padding: 6px 0;
+    height: 25px;
+    line-height: 25px;
+    color: #a6aebd;
+    font-size: 13px;
+    position: relative;
+
+}
+.ranking_left,.ranking_right{
+    float: left;
+    width:calc((100% - 1px)/2 - 10px);
+    padding-left: 10px;
+    line-height: 20px;
+}
+.ranking_left{
+    border-right: 1px solid #ebebeb;
+}
+.ranking_left b,.ranking_right b{
+   color: #4a4a4a;
+    font-size: 24px;
+    font-family:SimHei;
+    position: relative;
+    top: 2px;
+    font-weight: normal;
+}
+.ranking_left span,.ranking_right span{
+    color: #4a4a4a;
+    position: relative;
+    top: 1px;
+}
+.arrow{
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    color:#ff424a;
+
+}
+.arrow i{
+    display: inline-block;
+    width:8px;
+    height: 10px;
+    background: url("../images/arrow-red.png") no-repeat center;
+    background-size: 100%;
+
+}
+
+.time{
+    font-size: 13px;
+    color: #a6aebd;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 8px;
+}
+.star{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    margin-left: -43px;
+    width: 86px;
+    z-index: 1000;
+}
+.star li{
+    float: left;
+    margin: 0 2px;
+    width: 13px;
+    height: 14px;
+    background: url("../images/star_02.png") no-repeat center;
+    background-size: 100%;
+
+}
+.star .star01{
+    background: url("../images/star_01.png") no-repeat center;
+    background-size: 100%;
+}
+.progressBar{
+    width: 95%;
+    margin: 60px auto 0;
+    height: 26px;
+    border: 1px solid #e7e7e7;
+    border-radius: 13px;
+    position: relative;
+}
+.progressBar_bg{
+    position: relative;
+    height: 16px;
+    margin:5px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.progressBar_bg01{
+    float: left;
+     background: linear-gradient(90deg, #2a9df5, #9b7495);
+     /*width: 10%;*/
+     height: 100%;
+ }
+.progressBar_bg02{
+    float: left;
+    background: linear-gradient(90deg, #9b7495, #ff6e74);
+    /*width: 90%;*/
+    height: 100%;
+    /*margin-left: -1px;*/
+}
+.dot{
+    position: absolute;
+    top: 0;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: linear-gradient(0deg, #0cc164, #3af67f);
+    margin-left: -6px;
+}
+.toolTip{
+    position: absolute;
+    top: -35px;
+    padding:5px 0;
+    background: #ebebeb;
+    color:#a6aebd;
+    border-radius: 3px;
+    font-size: 13px;
+    margin-left:-43px;
+    width: 92px;
+    text-align: center;
+    display: none;
+}
+.tipArrow{
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    background: url("../images/tipArrow.png") no-repeat;
+    background-size: 100%;
+    bottom: -6px;
+    left: 50%;
+    margin-left: -4px;
+}
+
+.pp{
+    font-size: 13px;
+    color: #a6aebd;
+    line-height: 40px;
+    margin:8px 3%;
+    border-bottom: 1px solid #e8e8e8;
+}
